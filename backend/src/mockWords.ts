@@ -1,5 +1,3 @@
-// backend/src/mockWords.ts
-
 export const phrases = [
   {
     id: "1",

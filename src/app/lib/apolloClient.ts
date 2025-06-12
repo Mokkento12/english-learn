@@ -1,5 +1,3 @@
-// lib/apolloClient.ts
-
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { loadDevMessages, loadErrorMessages } from "@apollo/client/dev";
 

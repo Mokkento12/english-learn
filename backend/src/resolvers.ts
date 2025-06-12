@@ -1,28 +1,23 @@
 import { phrases } from "./mockWords";
+import type { Phrase } from "@/app/types";
 
 export const typeDefs = `
-  type Phrase {
+  type PhraseType {
     id: ID!
-    russian: String!
     english: String!
+    russian: String!
     tense: String!
     person: String!
   }
 
   type Query {
-    phrase(id: ID): Phrase
-    phrases: [Phrase!]!
-    randomPhrase: Phrase
+    randomPhrase: PhraseType
   }
 `;
 
 export const resolvers = {
   Query: {
-    phrase: (_source: unknown, { id }: { id: string }) => {
-      return phrases.find((phrase) => phrase.id === id) || null;
-    },
-    phrases: () => phrases,
-    randomPhrase: () => {
+    randomPhrase: (): Phrase => {
       const randomIndex = Math.floor(Math.random() * phrases.length);
       return phrases[randomIndex];
     },

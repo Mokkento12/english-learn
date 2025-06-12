@@ -1,7 +1,11 @@
-export interface Phrase {
+export type Phrase = {
   id: string;
-  russian: string;
   english: string;
+  russian: string;
   tense: string;
   person: string;
-}
+};
+
+export type RandomPhraseData = {
+  randomPhrase: Phrase;
+};

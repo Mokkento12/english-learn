@@ -1,4 +1,4 @@
-import styles from "./ResultFeedback.module.sass";
+// import styles from "./ResultFeedback.module.sass";
 
 interface ResultFeedbackProps {
   correct: boolean | null;
@@ -11,7 +11,7 @@ export default function ResultFeedback({
   correct,
   phrase,
 }: ResultFeedbackProps) {
-  if (correct === null || correct === false) return null;
+  if (correct === null) return null;
 
   return (
     <>
